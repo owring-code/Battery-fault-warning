@@ -11,8 +11,8 @@ MODEL_NAME = "BAAI/bge-large-zh-v1.5"
 VECTOR_STORE_PATH = "./faiss_industrial_index"
 VECTOR_INDEX_FILE = os.path.join(VECTOR_STORE_PATH, "index.faiss")
 VECTOR_META_FILE = os.path.join(VECTOR_STORE_PATH, "index.pkl")
-# 环境变量优先；未设置时回退到此默认 Key
-DEFAULT_DEEPSEEK_API_KEY = "718f5d15c52f407ca627085d1a7a2b4d.6keAW7oKgXAf2rlJ"
+# API Key must be configured by environment variable before startup.
+DEFAULT_DEEPSEEK_API_KEY = ""
 
 SYSTEM_PROMPT = """你是工业多模态智能诊断 Agent。
 你可以按需调用工具：

@@ -36,8 +36,8 @@ MODEL_NAME = "BAAI/bge-large-zh-v1.5"
 VECTOR_STORE_PATH = "./faiss_industrial_index"
 SESSION_FILE = "chat_sessions.json"
 
-# 环境变量优先，未设置时回退默认值
-API_KEY = os.getenv("API_KEY") or "718f5d15c52f407ca627085d1a7a2b4d.6keAW7oKgXAf2rlJ"
+# API Key must be configured by environment variable before startup.
+API_KEY = os.getenv("API_KEY") or os.getenv("DEEPSEEK_API_KEY") or ""
 BASE_URL = "https://open.bigmodel.cn/api/paas/v4/"
 LLM_MODEL = "glm-4-flash"
 
